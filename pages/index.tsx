@@ -99,20 +99,22 @@ export default function HomePage() {
   }, [selectedVariant, cartCount, isFavorite]);
 
   return (
-    <div className="min-h-screen bg-gray-100 text-black font-sans">
-      <header className="bg-white shadow-md p-4 flex justify-between items-center">
-        <h1 className="text-xl font-bold">HP Victus Store</h1>
+    <div className="min-h-screen bg-gray-900 text-gray-100 font-mono"> {/* Changed background, text color, and font */}
+      <header className="bg-gray-800 shadow-lg p-4 flex justify-between items-center border-b-2 border-purple-500"> {/* Darker header, added accent border */}
+        <h1 className="text-2xl font-bold text-purple-400 tracking-wider"> {/* Styled title */}
+          HP Victus Store
+        </h1>
         <div className="relative">
-          <span className="text-lg">🛒</span>
+          <span className="text-2xl">🛒</span> {/* Slightly larger cart icon */}
           {cartCount > 0 && (
-            <span className="absolute -top-2 -right-2 bg-red-600 text-white text-xs px-1.5 rounded-full">
+            <span className="absolute -top-2 -right-3 bg-red-500 text-white text-xs px-2 py-0.5 rounded-full shadow-md"> {/* Adjusted badge position and style */}
               {cartCount}
             </span>
           )}
         </div>
       </header>
 
-      <main className="container mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-8"> {/* Updated padding classes */}
+      <main className="container mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-8 mt-8"> {/* Added margin-top */}
         <ProductGallery
           images={productData.images}
           selectedImage={selectedImage}
@@ -129,7 +131,7 @@ export default function HomePage() {
         />
       </main>
 
-      <footer className="bg-gray-800 text-white text-center p-4 mt-8">
+      <footer className="bg-gray-800 text-gray-400 text-center p-6 mt-12 border-t-2 border-gray-700"> {/* Darker footer, adjusted padding and border */}
         <p>&copy; {new Date().getFullYear()} HP Victus Store. All rights reserved.</p>
       </footer>
     </div>
