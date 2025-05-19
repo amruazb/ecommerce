@@ -94,13 +94,32 @@ const ProductInfo: React.FC<ProductInfoProps> = ({
         </button>
       </div>
 
-      <ul className="space-y-1 text-sm mt-4 text-gray-600"> {/* Added text-gray-600 for better visibility */}
-        <li>✔️ FREE Returns</li>
-        <li>✔️ 15 days Returnable</li>
-        <li>✔️ Free Delivery</li>
-        <li>✔️ Fulfilled by Amazon</li>
-        <li>✔️ Secure transaction</li>
-      </ul>
+      {/* Product Benefits/Features */}
+      <div className="mt-6 text-sm text-gray-600 space-y-2">
+        <p>✓ FREE Returns</p>
+        <p>✓ Secure transaction</p>
+        <p>✓ Ships from Amazon</p>
+        <p>✓ Sold by HP</p>
+      </div>
+
+      {/* Collapsible Product Details */}
+      <details className="mt-4">
+        <summary className="font-semibold cursor-pointer text-blue-600 hover:underline">Product details</summary>
+        <div className="mt-2 text-sm text-gray-700 bg-gray-50 p-3 rounded-md">
+          <p><strong>Processor:</strong> Intel Core i5-12450H</p>
+          <p><strong>Graphics:</strong> NVIDIA GeForce RTX 3050 Laptop GPU</p>
+          <p><strong>Display:</strong> 15.6-inch, FHD (1920 x 1080), 144 Hz, IPS</p>
+          <p><strong>Keyboard:</strong> Full-size, backlit, mica silver keyboard with numeric keypad</p>
+          <p><strong>Audio:</strong> Audio by B&O; Dual speakers; HP Audio Boost</p>
+          <p><strong>Webcam:</strong> HP Wide Vision 720p HD camera with temporal noise reduction</p>
+          <p><strong>Ports:</strong> 1 SuperSpeed USB Type-C® 5Gbps signaling rate (DisplayPort™ 1.4, HP Sleep and Charge); 1 SuperSpeed USB Type-A 5Gbps signaling rate (HP Sleep and Charge); 1 SuperSpeed USB Type-A 5Gbps signaling rate; 1 HDMI 2.1; 1 RJ-45; 1 AC smart pin; 1 headphone/microphone combo</p>
+          <p><strong>Wireless:</strong> Realtek Wi-Fi 6 (2x2) and Bluetooth® 5.3 wireless card</p>
+          <p><strong>Battery:</strong> 4-cell, 70 Wh Li-ion polymer</p>
+          <p><strong>Weight:</strong> Starting at 2.29 kg</p>
+          <p><strong>Warranty:</strong> 1-year limited warranty</p>
+          <p className="mt-2 italic">More details available on the official HP website or by contacting support.</p>
+        </div>
+      </details>
 
     </div>
   );

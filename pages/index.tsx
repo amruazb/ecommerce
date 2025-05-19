@@ -102,10 +102,17 @@ export default function HomePage() {
     <div className="min-h-screen bg-gray-100 text-black font-sans">
       <header className="bg-white shadow-md p-4 flex justify-between items-center">
         <h1 className="text-xl font-bold">HP Victus Store</h1>
-        <div>Cart: {cartCount}</div>
+        <div className="relative">
+          <span className="text-lg">🛒</span>
+          {cartCount > 0 && (
+            <span className="absolute -top-2 -right-2 bg-red-600 text-white text-xs px-1.5 rounded-full">
+              {cartCount}
+            </span>
+          )}
+        </div>
       </header>
 
-      <main className="container mx-auto p-4 grid grid-cols-1 md:grid-cols-2 gap-8">
+      <main className="container mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-8"> {/* Updated padding classes */}
         <ProductGallery
           images={productData.images}
           selectedImage={selectedImage}
